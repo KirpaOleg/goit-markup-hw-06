@@ -568,10 +568,16 @@ img {
   margin-bottom: 12px;
 }
 .modal-inputs {
+  position: relative;
   display: flex;
   flex-direction: column;
-  column-gap: 10px;
   width: 100%;
+}
+.input-icon {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  fill: var(--secondary-text-color);
 }
 .modal-input-label {
   display: block;
@@ -582,9 +588,20 @@ img {
   margin-bottom: 4px;
 }
 .modal-input {
-  height: 40px;
+  max-height: 40px;
+  padding: 11px 15px 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+}
+.modal-input:focus,
+.modal-text-input:focus {
+  border-color: var(--accent-color);
+}
+.modal-input:focus ~ .input-icon {
+  fill: var(--accent-color);
 }
 .modal-text-input {
   display: block;
@@ -594,17 +611,16 @@ img {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+  outline: none;
   margin-bottom: 20px;
 }
 .modal-text-input::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-checkbox {
-  /* margin: auto; */
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
@@ -619,13 +635,14 @@ img {
   width: 16px;
   height: 15px;
   margin-right: 8px;
-  background-color: var(--secondary-text-color);
+  cursor: pointer;
 }
 .checkbox-contract {
   margin-left: 5px;
   color: var(--accent-color);
   text-decoration: underline;
 }
+
 .modal-btn-send {
   margin: auto;
   width: 200px;
@@ -634,11 +651,15 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  background-color: var(--button-active-color);
+  background-color: var(--accent-color);
   border: none;
   cursor: pointer;
   padding: 10px 52px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
   transition: background-color 250ms var(--prymary-time-func);
+}
+.modal-btn-send:hover,
+.modal-btn-send:focus {
+  background-color: var(--button-active-color);
 }
