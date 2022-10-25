@@ -161,6 +161,8 @@ img {
   padding-bottom: 200px;
 }
 .hero-title {
+  max-width: 696px;
+  margin: 0 auto;
   color: var(--white-text-color);
   font-weight: 900;
   font-size: 44px;
@@ -344,6 +346,8 @@ img {
 /* footer */
 .footer {
   background-color: var(--footer-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-logo {
   color: var(--white-text-color);
@@ -380,8 +384,6 @@ img {
   margin-bottom: 9px;
 }
 .box {
-  padding-top: 60px;
-  padding-bottom: 60px;
   display: flex;
   align-items: baseline;
 }
